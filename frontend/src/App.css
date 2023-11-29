@@ -81,6 +81,19 @@ button:active {
   background-color: #5a93f0;
 }
 
+.button.red {
+  background-color: #e74c3c; /* Red background color */
+  border-color: #c0392b; /* Red border color */
+}
+
+.button.red:hover {
+  background-color: #d9534f; /* Darker red on hover */
+}
+
+.button.red:active {
+  background-color: #c9302c; /* Even darker red on click */
+}
+
 input {
   margin-bottom: 10px;
   font-size: 20px;

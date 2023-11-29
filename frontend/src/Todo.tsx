@@ -2,17 +2,27 @@ import React from 'react';
 import './App.css';
 
 export type TodoType = {
-  title: string,
-  description: string,
+  Title: string,
+  Description: string,
+  Id:number,
+  DeleteFunc: () => Promise<void>;
 }
 
-function Todo({ title, description }: TodoType) {
+
+
+function Todo({ Title, Description, DeleteFunc }: TodoType) {
+  const handleDelete = () => {
+    DeleteFunc();
+    }
+
   return (
     <div className="todo">
       <div className="todo-details">
-        <p className="todo-title">{title}</p>
-        <p className="todo-description">{description}</p>
+        <p className="todo-title">{Title}</p>
+        <p className="todo-description">{Description}</p>
       </div>
+      <button className="button red" onClick={handleDelete}>Delete
+      </button>
     </div>
   );
 }
